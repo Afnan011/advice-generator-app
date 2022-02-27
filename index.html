@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> Advice generator app</title>
+  <link rel="icon" href="/images/icon.png">
+
+  <link rel="stylesheet" href="style.css">
+<!--  -->
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      Advice # <span id=advice-id></span>
+      <div class="advice-text">
+        <span id="text-advice">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, facilis."</span>
+      </div>
+      <picture>
+        <source 
+        media="(max-width: 465px)"
+        srcset="/images/pattern-divider-mobile.svg">
+        <img src="/images/pattern-divider-desktop.svg" id="dividerImg" alt="">
+     </picture>
+      <div class="dice">
+        <img src="/images/icon-dice.svg" onclick="loadQuote()">
+      </div>
+    </div>    
+  </div>  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.instagram.com/afnan_ndy/" target="_blank">Afnan</a>.
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+}
+.attribution {
+    color: white;
+    background-color: black;
+    font-size: 11px; 
+    text-align: center;
+    word-spacing: 0.3rem;
+}
+.attribution a {
+    min-height: 2vh;
+    color: hsl(228, 55%, 70%); 
+}
+.container{
+    height: 100vh;
+    background-color: hsl(217, 19%, 38%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.card{
+    height: 50vh;
+    width: 40vw;
+    background-color: hsl(217, 19%, 24%);
+    border-radius: 10px;
+    color: hsl(150, 100%, 66%);
+    padding: 1.5rem 1rem;
+    letter-spacing: 0.4rem;
+    position: relative;
+    border: 1px solid hsl(216, 39%, 69%);;
+    box-shadow: 0 2px 10px rgba(116, 139, 180, 0.8);
+}
+
+.advice-text{
+    padding: 1rem;
+    margin-top: 0.5rem;
+    font-size: 1.7rem;
+    color: rgba(255, 255, 255, 0.774);
+    letter-spacing: 0;
+}
+.dice{
+    background-color: aqua;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -20px;
+    left : 18vw;
+    right: 18vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    animation: out 0.9s;
+    
+}
+.dice:hover{
+    color: rgba(255, 255, 255, 1);
+    /* box-shadow: 0 2px 15px hsl(193, 38%, 86%, .8); */
+    cursor: pointer;
+    animation: in 1.5s forwards;
+    box-shadow: 0 0 7px #fff,
+    0 0 21px rgba(255, 255, 255, 0.719),
+    0 0 42px rgba(0, 255, 170, 0.712);
+
+}
+.dice:active{
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 3px 25px hsl(150, 100%, 66%);
+}
+#dividerImg{
+    padding-top: 1rem;
+    padding-bottom: 0;
+    user-select: none;
+}
+@keyframes in {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes out {
+    from{
+        transform: rotate(90deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+
+@media(max-width: 450px) {
+    .container{
+        height: 100vh;
+        width: 100vw;
+    }
+    .attribution{
+        font-size : 50%;
+    }
+    .card{
+        /* max-height: 60vh; */
+        min-height: 30vh;
+        height: fit-content;
+        width: 94vw;
+        overflow: hidden;
+        padding: 1rem;       
+    }
+    .advice-text{
+        font-size: 1.3rem;
+        padding: 0.5rem;
+        margin:10px 0;
+    }
+    .dice{
+        bottom: 0;
+        left:43%;
+        right: 45%;
+        user-select: none;       
+    }
+    #dividerImg{
+        margin-bottom: 3rem;
+    }
+    .dice:active{
+        animation:in 2s forwards;
+    }
+
+}
